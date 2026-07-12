@@ -2,27 +2,23 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/html%20files(structure)/index.html"
-    },
-    {
-      "source": "/home",
-      "destination": "/html%20files(structure)/index.html"
+      "destination": "/html-files/index.html"
     },
     {
       "source": "/practice",
-      "destination": "/html%20files(structure)/practice.html"
+      "destination": "/html-files/practice.html"
     },
     {
       "source": "/portfolio",
-      "destination": "/html%20files(structure)/portfolio.html"
+      "destination": "/html-files/portfolio.html"
     },
     {
       "source": "/community",
-      "destination": "/html%20files(structure)/community.html"
+      "destination": "/html-files/community.html"
     },
     {
       "source": "/progress",
-      "destination": "/html%20files(structure)/progress.html"
+      "destination": "/html-files/progress.html"
     }
   ]
 }
