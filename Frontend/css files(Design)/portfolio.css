@@ -1,0 +1,825 @@
+/* ==========================================================
+   SPEAKUP AI
+   PORTFOLIO PAGE
+   PART 1
+========================================================== */
+
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.portfolio-header{
+    margin-bottom:40px;
+}
+
+.portfolio-header h1{
+    font-size:42px;
+    font-weight:800;
+    color:#111827;
+    margin-top:14px;
+}
+
+.portfolio-header p{
+    max-width:700px;
+    margin-top:12px;
+    line-height:1.7;
+    color:#6b7280;
+    font-size:17px;
+}
+
+
+
+/* ===========================
+   PORTFOLIO STATS
+=========================== */
+
+.portfolio-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
+
+    margin-bottom:40px;
+
+}
+
+.stat-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    text-align:center;
+
+    border:1px solid #e5e7eb;
+
+    transition:.25s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.stat-card i{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#eef4ff;
+
+    color:#4f46e5;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+}
+
+.stat-card h2{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#111827;
+
+}
+
+.stat-card p{
+
+    margin-top:8px;
+
+    color:#6b7280;
+
+}
+
+
+
+/* ===========================
+   TOOLBAR
+=========================== */
+
+.portfolio-toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.toolbar-left select{
+
+    width:220px;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    border:1px solid #d1d5db;
+
+    font-size:15px;
+
+    outline:none;
+
+    background:white;
+
+    cursor:pointer;
+
+}
+
+.search-box{
+
+    width:320px;
+
+    background:white;
+
+    border-radius:12px;
+
+    border:1px solid #d1d5db;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 16px;
+
+}
+
+.search-box i{
+
+    color:#9ca3af;
+
+    margin-right:10px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:14px 0;
+
+    border:none;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+
+
+/* ===========================
+   GRID
+=========================== */
+
+.portfolio-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+/* ===========================
+   SPEECH CARD
+=========================== */
+
+.speech-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.speech-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 24px 55px rgba(0,0,0,.12);
+
+}
+
+
+
+/* ===========================
+   THUMBNAIL
+=========================== */
+
+.speech-thumbnail{
+
+    position:relative;
+
+    height:220px;
+
+    background:#e5e7eb;
+
+    overflow:hidden;
+
+}
+
+.speech-thumbnail video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+/* Dark Overlay */
+
+.speech-thumbnail::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.18);
+
+}
+
+
+
+/* ===========================
+   PLAY BUTTON
+=========================== */
+
+.play-overlay{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:10;
+
+}
+
+.play-overlay:hover{
+
+    transform:translate(-50%,-50%) scale(1.08);
+
+}
+
+.play-overlay i{
+
+    font-size:24px;
+
+    color:#4f46e5;
+
+}
+
+
+
+/* ===========================
+   VISIBILITY BADGE
+=========================== */
+
+.visibility{
+
+    position:absolute;
+
+    top:16px;
+
+    right:16px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    z-index:20;
+
+}
+
+.visibility.public{
+
+    background:#10b981;
+
+}
+
+.visibility.private{
+
+    background:#ef4444;
+
+}
+
+
+
+/* ===========================
+   CARD CONTENT
+=========================== */
+
+.speech-content{
+
+    padding:24px;
+
+}
+
+.speech-content h3{
+
+    font-size:23px;
+
+    color:#111827;
+
+    margin-bottom:8px;
+
+}
+
+.speech-content p{
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+}
+/* ==========================================================
+   SPEAKUP AI
+   PORTFOLIO PAGE
+   PART 2
+========================================================== */
+
+
+/* ===========================
+   SPEECH TYPE TAG
+=========================== */
+
+.speech-type{
+
+    display:inline-block;
+
+    margin-top:4px;
+
+    margin-bottom:22px;
+
+    padding:8px 14px;
+
+    background:#eef2ff;
+
+    color:#4f46e5;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    border-radius:999px;
+
+}
+
+.speech-type.demonstration{
+
+    background:#eef2ff;
+
+    color:#4338ca;
+
+}
+
+.speech-type.informative{
+
+    background:#ecfeff;
+
+    color:#0891b2;
+
+}
+
+.speech-type.persuasive{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+.speech-type.motivational{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.speech-type.ted{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+
+
+/* ===========================
+   OVERALL SCORE
+=========================== */
+
+.overall-score{
+
+    background:#f9fafb;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    margin-bottom:24px;
+
+}
+
+.overall-score p{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.overall-score h2{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#4f46e5;
+
+    line-height:1;
+
+}
+
+.overall-score h2 span{
+
+    font-size:18px;
+
+    color:#9ca3af;
+
+    margin-left:4px;
+
+}
+
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.speech-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-top:1px solid #f3f4f6;
+
+    padding-top:18px;
+
+}
+
+.speech-footer span{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* ===========================
+   VIEW ANALYSIS BUTTON
+=========================== */
+
+.analysis-btn{
+
+    border:none;
+
+    outline:none;
+
+    background:#4f46e5;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.analysis-btn:hover{
+
+    background:#4338ca;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* ===========================
+   CARD HOVER EFFECTS
+=========================== */
+
+.speech-card:hover .play-overlay{
+
+    background:#4f46e5;
+
+}
+
+.speech-card:hover .play-overlay i{
+
+    color:white;
+
+}
+
+.speech-card:hover .overall-score{
+
+    background:#eef2ff;
+
+    border-color:#c7d2fe;
+
+}
+
+.speech-card:hover h3{
+
+    color:#4f46e5;
+
+}
+
+
+
+/* ===========================
+   EMPTY PORTFOLIO STATE
+=========================== */
+
+.empty-portfolio{
+
+    width:100%;
+
+    padding:80px 40px;
+
+    background:white;
+
+    border-radius:22px;
+
+    border:2px dashed #d1d5db;
+
+    text-align:center;
+
+}
+
+.empty-portfolio i{
+
+    font-size:70px;
+
+    color:#9ca3af;
+
+    margin-bottom:20px;
+
+}
+
+.empty-portfolio h2{
+
+    color:#374151;
+
+    margin-bottom:12px;
+
+}
+
+.empty-portfolio p{
+
+    color:#6b7280;
+
+    margin-bottom:24px;
+
+}
+
+
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#c7d2fe;
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#818cf8;
+
+}
+
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+    .portfolio-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:850px){
+
+    .portfolio-toolbar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .search-box{
+
+        width:100%;
+
+    }
+
+    .toolbar-left select{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .portfolio-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .speech-thumbnail{
+
+        height:210px;
+
+    }
+
+    .speech-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:14px;
+
+    }
+
+    .analysis-btn{
+
+        width:100%;
+
+    }
+
+}
+
+
+
+/* ===========================
+   FADE-IN ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.speech-card{
+
+    animation:fadeUp .45s ease forwards;
+
+}

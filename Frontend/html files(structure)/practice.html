@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpeakUp AI | Practice Studio</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css files(Design)/style.css">
+
+    <!-- Practice CSS -->
+    <link rel="stylesheet" href="../css files(Design)/practice.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-microphone"></i>
+
+            <h2>SpeakUp AI</h2>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home
+
+            </a>
+
+            <a class="active" href="practice.html">
+
+                <i class="fa-solid fa-video"></i>
+
+                Practice
+
+            </a>
+
+            <a href="portfolio.html">
+
+                <i class="fa-solid fa-folder"></i>
+
+                Portfolio
+
+            </a>
+
+            <a href="community.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                Community
+
+            </a>
+
+            <a href="progress.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                Progress
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <section class="practice-header">
+
+            <span class="badge">
+
+                AI Practice Studio
+
+            </span>
+
+            <h1>Practice Your Speech</h1>
+
+            <p>
+
+                Record yourself live or upload an existing speech for AI analysis.
+
+            </p>
+
+        </section>
+
+        <!-- ==============================
+             LIVE CAMERA STUDIO
+        =============================== -->
+
+        <section class="studio-card">
+
+            <div class="studio-header">
+
+                <div>
+
+                    <h2>
+
+                        <i class="fa-solid fa-video"></i>
+
+                        Live Practice Studio
+
+                    </h2>
+
+                    <p>
+
+                        Practice naturally while SpeakUp AI records your speech.
+
+                    </p>
+
+                </div>
+
+                <div id="recordStatus" class="recording-status">
+
+                    <span class="record-dot"></span>
+
+                    Ready
+
+                </div>
+
+            </div>
+
+            <!-- Camera -->
+
+            <div class="camera-wrapper">
+
+                <video
+
+                    id="camera"
+
+                    autoplay
+
+                    muted
+
+                    playsinline>
+
+                </video>
+
+                <!-- Placeholder -->
+
+                <div id="cameraPlaceholder" class="camera-placeholder">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    <h2>Camera Preview</h2>
+
+                    <p>
+
+                        Click <strong>Start Recording</strong> to enable your webcam.
+
+                    </p>
+
+                </div>
+
+                <!-- Overlay -->
+
+                <div class="camera-overlay">
+
+                    <div class="recording-pill">
+
+                        <span class="record-dot"></span>
+
+                        Recording
+
+                    </div>
+
+                    <div id="timer">
+
+                        00:00
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+
+            <div class="recording-controls">
+
+                <button
+                    id="startRecording"
+                    class="primary-btn">
+
+                    <i class="fa-solid fa-circle-play"></i>
+
+                    Start Recording
+
+                </button>
+
+                <button
+                    id="stopRecording"
+                    class="secondary-btn">
+
+                    <i class="fa-solid fa-stop"></i>
+
+                    Stop
+
+                </button>
+
+                <button
+                    id="replayRecording"
+                    class="secondary-btn">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    Replay
+
+                </button>
+
+                <button
+                    id="downloadRecording"
+                    class="secondary-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+             LOWER SECTION STARTS HERE
+        ====================================== -->
+
+        <section class="bottom-grid">
+                    <!-- ==========================
+             Prompt & Details
+        =========================== -->
+
+        <div class="practice-card">
+
+            <div class="card-header">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <h2>Prompt & Details</h2>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Speech Title</label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your speech title">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Speech Prompt</label>
+
+                <textarea
+                    rows="8"
+                    placeholder="Paste your speech prompt here..."></textarea>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Expected Time</label>
+
+                    <select>
+
+                        <option>3-5 Minutes</option>
+                        <option selected>5-7 Minutes</option>
+                        <option>8-10 Minutes</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Visibility</label>
+
+                    <select>
+
+                        <option selected>Private</option>
+                        <option>Public</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- Upload Existing Video -->
+
+            <div class="form-group">
+
+                <label>Already Have A Recording?</label>
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <h3>Upload Video</h3>
+
+                    <p>
+
+                        Drag & Drop your speech video
+                        <br>
+                        or click below to browse.
+
+                    </p>
+
+                    <input
+                        type="file"
+                        id="videoUpload"
+                        accept="video/*">
+
+                </div>
+
+            </div>
+
+        
+<button type="button" class="analyze-btn">
+    <i class="fa-solid fa-chart-line"></i>
+    Analyze My Speech
+</button>
+
+        </div>
+
+        <!-- ==========================
+             Generate Prompt
+        =========================== -->
+
+        <div class="practice-card">
+
+            <div class="card-header">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                <h2>Generate Prompt</h2>
+
+            </div>
+
+            <p>
+
+                Let SpeakUp AI generate a brand-new speech idea.
+
+            </p>
+
+            <div class="form-group">
+
+                <label>Speech Type</label>
+
+                <select>
+
+                    <option>Original Oratory</option>
+                    <option>Informative</option>
+                    <option>Persuasive</option>
+                    <option>Impromptu</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Difficulty</label>
+
+                <select>
+
+                    <option>Beginner</option>
+                    <option selected>Intermediate</option>
+                    <option>Advanced</option>
+
+                </select>
+
+            </div>
+
+            <button
+                id="generatePrompt"
+                class="primary-btn">
+
+                <i class="fa-solid fa-sparkles"></i>
+
+                Generate Prompt
+
+            </button>
+
+            <!-- Generated Prompt -->
+
+            <div class="generated-prompt">
+
+                <h3>
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    Generated Prompt
+
+                </h3>
+
+                <div id="generatedPromptText">
+
+                    <p>
+
+                        Your AI-generated speech prompt will appear here.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+            <!-- =====================================
+             AI FEEDBACK
+        ====================================== -->
+
+        <section class="feedback-section">
+
+            <div class="feedback-grid">
+
+    <div class="feedback-box">
+        <i class="fa-solid fa-star"></i>
+        <h3>Overall Score</h3>
+        <span id="overallScore">-- / 100</span>
+    </div>
+
+    <div class="feedback-box">
+        <i class="fa-solid fa-eye"></i>
+        <h3>Eye Contact</h3>
+        <span id="eyeContactScore">--%</span>
+    </div>
+
+    <div class="feedback-box">
+        <i class="fa-solid fa-face-smile"></i>
+        <h3>Confidence</h3>
+        <span id="confidenceScore">--%</span>
+    </div>
+
+    <div class="feedback-box">
+        <i class="fa-solid fa-volume-high"></i>
+        <h3>Voice Clarity</h3>
+        <span id="voiceClarityScore">--%</span>
+    </div>
+
+    <div class="feedback-box">
+        <i class="fa-solid fa-person-walking"></i>
+        <h3>Speaking Pace</h3>
+        <span id="speakingPaceScore">--%</span>
+    </div>
+
+    <div class="feedback-box">
+        <i class="fa-solid fa-person-walking"></i>
+        <h3>Body Language</h3>
+        <span id="bodyLanguageScore">--%</span>
+    </div>
+
+    <div class="feedback-box">
+        <i class="fa-solid fa-sitemap"></i>
+        <h3>Organization</h3>
+        <span id="organizationScore">--%</span>
+    </div>
+
+    <div class="feedback-box">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h3>Suggestions</h3>
+        <span id="suggestions">Waiting...</span>
+    </div>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- Practice JavaScript -->
+
+<script src="../js files (Functionality)/practice.js"></script>
+
+</body>
+
+</html>

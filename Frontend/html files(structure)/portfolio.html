@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SpeakUp AI | Portfolio</title>
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="../css files(Design)/style.css"
+    >
+
+    <!-- Portfolio CSS -->
+    <link
+        rel="stylesheet"
+        href="../css files(Design)/portfolio.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-microphone"></i>
+
+            <h2>SpeakUp AI</h2>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Home</span>
+
+            </a>
+
+            <a href="practice.html">
+
+                <i class="fa-solid fa-video"></i>
+
+                <span>Practice</span>
+
+            </a>
+
+            <a
+                href="portfolio.html"
+                class="active"
+            >
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span>Portfolio</span>
+
+            </a>
+
+            <a href="community.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Community</span>
+
+            </a>
+
+            <a href="progress.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Progress</span>
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main">
+
+        <!-- =====================================
+             PAGE HEADER
+        ====================================== -->
+
+        <section class="portfolio-header">
+
+            <span class="badge">
+
+                <i class="fa-solid fa-microphone-lines"></i>
+
+                Your Speaking Journey
+
+            </span>
+
+            <h1>My Speech Portfolio</h1>
+
+            <p>
+                Replay your speeches, review your performance scores,
+                and track your public-speaking improvement over time.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             PORTFOLIO STATS
+        ====================================== -->
+
+        <section class="portfolio-stats">
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-video"></i>
+
+                </div>
+
+                <div class="stat-information">
+
+                    <h2 id="totalSpeeches">5</h2>
+
+                    <p>Total Speeches</p>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <div class="stat-information">
+
+                    <h2 id="averageScore">86</h2>
+
+                    <p>Average Score</p>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                </div>
+
+                <div class="stat-information">
+
+                    <h2 id="practiceStreak">7</h2>
+
+                    <p>Practice Streak</p>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+                <div class="stat-information">
+
+                    <h2 id="achievementCount">3</h2>
+
+                    <p>Achievements</p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================
+             PORTFOLIO TOOLBAR
+        ====================================== -->
+
+        <section class="portfolio-toolbar">
+
+            <div class="toolbar-left">
+
+                <label for="portfolioFilter">
+
+                    <i class="fa-solid fa-filter"></i>
+
+                    Filter
+
+                </label>
+
+                <select id="portfolioFilter">
+
+                    <option value="all">
+                        All Speeches
+                    </option>
+
+                    <option value="public">
+                        Public
+                    </option>
+
+                    <option value="private">
+                        Private
+                    </option>
+
+                    <option value="demonstration">
+                        Demonstration
+                    </option>
+
+                    <option value="motivational">
+                        Motivational
+                    </option>
+
+                    <option value="informative">
+                        Informative
+                    </option>
+
+                    <option value="persuasive">
+                        Persuasive
+                    </option>
+
+                    <option value="ted">
+                        TED-Style
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="toolbar-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="speechSearch"
+                        placeholder="Search speeches..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             EMPTY STATE
+        ====================================== -->
+
+        <section
+            class="portfolio-empty"
+            id="portfolioEmpty"
+            hidden
+        >
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            <h2>No speeches found</h2>
+
+            <p>
+                Try choosing another filter or searching for
+                a different speech.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             SPEECH GRID
+        ====================================== -->
+
+        <section
+            class="portfolio-grid"
+            id="portfolioGrid"
+        >
+
+
+            <!-- =====================================
+                 SPEECH CARD 1
+            ====================================== -->
+
+            <article
+                class="speech-card"
+                data-title="The Art of Storytelling"
+                data-type="demonstration"
+                data-visibility="public"
+                data-score="89"
+            >
+
+                <div class="speech-thumbnail">
+
+                    <video
+                        class="portfolio-video"
+                        src="../assets/videos/storytelling.mp4"
+                        preload="metadata"
+                        playsinline
+                    ></video>
+
+                    <button
+                        type="button"
+                        class="play-overlay"
+                        aria-label="Play The Art of Storytelling"
+                    >
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                    <span class="visibility public">
+
+                        <i class="fa-solid fa-earth-americas"></i>
+
+                        Public
+
+                    </span>
+
+                    <span class="video-duration">
+                        Speech 01
+                    </span>
+
+                </div>
+
+
+                <div class="speech-content">
+
+                    <div class="speech-heading">
+
+                        <div>
+
+                            <h3>The Art of Storytelling</h3>
+
+                            <span class="speech-type demonstration">
+                                Demonstration Speech
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="speech-menu"
+                            aria-label="Speech options"
+                        >
+
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="overall-score">
+
+                        <div>
+
+                            <p>Overall Speech Score</p>
+
+                            <span>Strong Performance</span>
+
+                        </div>
+
+                        <h2>
+                            89
+                            <span>/100</span>
+                        </h2>
+
+                    </div>
+
+
+                    <div class="speech-footer">
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 8, 2026
+
+                        </span>
+
+                        <button
+                            type="button"
+                            class="analysis-btn"
+                            data-speech="storytelling"
+                        >
+
+                            View Analysis
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================
+                 SPEECH CARD 2
+            ====================================== -->
+
+            <article
+                class="speech-card"
+                data-title="Why Failure Is Your Greatest Teacher"
+                data-type="motivational"
+                data-visibility="public"
+                data-score="85"
+            >
+
+                <div class="speech-thumbnail">
+
+                    <video
+                        class="portfolio-video"
+                        src="../assets/videos/failure.mp4"
+                        preload="metadata"
+                        playsinline
+                    ></video>
+
+                    <button
+                        type="button"
+                        class="play-overlay"
+                        aria-label="Play Why Failure Is Your Greatest Teacher"
+                    >
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                    <span class="visibility public">
+
+                        <i class="fa-solid fa-earth-americas"></i>
+
+                        Public
+
+                    </span>
+
+                    <span class="video-duration">
+                        Speech 02
+                    </span>
+
+                </div>
+
+
+                <div class="speech-content">
+
+                    <div class="speech-heading">
+
+                        <div>
+
+                            <h3>
+                                Why Failure Is Your Greatest Teacher
+                            </h3>
+
+                            <span class="speech-type motivational">
+                                Motivational Speech
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="speech-menu"
+                            aria-label="Speech options"
+                        >
+
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="overall-score">
+
+                        <div>
+
+                            <p>Overall Speech Score</p>
+
+                            <span>Great Progress</span>
+
+                        </div>
+
+                        <h2>
+                            85
+                            <span>/100</span>
+                        </h2>
+
+                    </div>
+
+
+                    <div class="speech-footer">
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 7, 2026
+
+                        </span>
+
+                        <button
+                            type="button"
+                            class="analysis-btn"
+                            data-speech="failure"
+                        >
+
+                            View Analysis
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================
+                 SPEECH CARD 3
+            ====================================== -->
+
+            <article
+                class="speech-card"
+                data-title="How Memory Shapes Who We Are"
+                data-type="informative"
+                data-visibility="private"
+                data-score="78"
+            >
+
+                <div class="speech-thumbnail">
+
+                    <video
+                        class="portfolio-video"
+                        src="../assets/videos/memory.mp4"
+                        preload="metadata"
+                        playsinline
+                    ></video>
+
+                    <button
+                        type="button"
+                        class="play-overlay"
+                        aria-label="Play How Memory Shapes Who We Are"
+                    >
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                    <span class="visibility private">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Private
+
+                    </span>
+
+                    <span class="video-duration">
+                        Speech 03
+                    </span>
+
+                </div>
+
+
+                <div class="speech-content">
+
+                    <div class="speech-heading">
+
+                        <div>
+
+                            <h3>
+                                How Memory Shapes Who We Are
+                            </h3>
+
+                            <span class="speech-type informative">
+                                Informative Speech
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="speech-menu"
+                            aria-label="Speech options"
+                        >
+
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="overall-score">
+
+                        <div>
+
+                            <p>Overall Speech Score</p>
+
+                            <span>Developing Skills</span>
+
+                        </div>
+
+                        <h2>
+                            78
+                            <span>/100</span>
+                        </h2>
+
+                    </div>
+
+
+                    <div class="speech-footer">
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 6, 2026
+
+                        </span>
+
+                        <button
+                            type="button"
+                            class="analysis-btn"
+                            data-speech="memory"
+                        >
+
+                            View Analysis
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================
+                 SPEECH CARD 4
+            ====================================== -->
+
+            <article
+                class="speech-card"
+                data-title="Embracing the Unknown"
+                data-type="ted"
+                data-visibility="public"
+                data-score="92"
+            >
+
+                <div class="speech-thumbnail">
+
+                    <video
+                        class="portfolio-video"
+                        src="../assets/videos/unknown.mp4"
+                        preload="metadata"
+                        playsinline
+                    ></video>
+
+                    <button
+                        type="button"
+                        class="play-overlay"
+                        aria-label="Play Embracing the Unknown"
+                    >
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                    <span class="visibility public">
+
+                        <i class="fa-solid fa-earth-americas"></i>
+
+                        Public
+
+                    </span>
+
+                    <span class="video-duration">
+                        Speech 04
+                    </span>
+
+                </div>
+
+
+                <div class="speech-content">
+
+                    <div class="speech-heading">
+
+                        <div>
+
+                            <h3>Embracing the Unknown</h3>
+
+                            <span class="speech-type ted">
+                                TED-Style Talk
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="speech-menu"
+                            aria-label="Speech options"
+                        >
+
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="overall-score">
+
+                        <div>
+
+                            <p>Overall Speech Score</p>
+
+                            <span>Excellent Speech</span>
+
+                        </div>
+
+                        <h2>
+                            92
+                            <span>/100</span>
+                        </h2>
+
+                    </div>
+
+
+                    <div class="speech-footer">
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 5, 2026
+
+                        </span>
+
+                        <button
+                            type="button"
+                            class="analysis-btn"
+                            data-speech="unknown"
+                        >
+
+                            View Analysis
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================
+                 SPEECH CARD 5
+            ====================================== -->
+
+            <article
+                class="speech-card"
+                data-title="The Future of Renewable Energy"
+                data-type="persuasive"
+                data-visibility="public"
+                data-score="87"
+            >
+
+                <div class="speech-thumbnail">
+
+                    <video
+                        class="portfolio-video"
+                        src="../assets/videos/energy.mp4"
+                        preload="metadata"
+                        playsinline
+                    ></video>
+
+                    <button
+                        type="button"
+                        class="play-overlay"
+                        aria-label="Play The Future of Renewable Energy"
+                    >
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                    <span class="visibility public">
+
+                        <i class="fa-solid fa-earth-americas"></i>
+
+                        Public
+
+                    </span>
+
+                    <span class="video-duration">
+                        Speech 05
+                    </span>
+
+                </div>
+
+
+                <div class="speech-content">
+
+                    <div class="speech-heading">
+
+                        <div>
+
+                            <h3>
+                                The Future of Renewable Energy
+                            </h3>
+
+                            <span class="speech-type persuasive">
+                                Persuasive Speech
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="speech-menu"
+                            aria-label="Speech options"
+                        >
+
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="overall-score">
+
+                        <div>
+
+                            <p>Overall Speech Score</p>
+
+                            <span>Strong Performance</span>
+
+                        </div>
+
+                        <h2>
+                            87
+                            <span>/100</span>
+                        </h2>
+
+                    </div>
+
+
+                    <div class="speech-footer">
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Jul 4, 2026
+
+                        </span>
+
+                        <button
+                            type="button"
+                            class="analysis-btn"
+                            data-speech="energy"
+                        >
+
+                            View Analysis
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================
+     ANALYSIS MODAL
+====================================== -->
+
+<div
+    class="analysis-modal"
+    id="analysisModal"
+    aria-hidden="true"
+>
+
+    <div class="analysis-modal-overlay"></div>
+
+    <div
+        class="analysis-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalSpeechTitle"
+    >
+
+       
+
+
+<!-- Portfolio JavaScript -->
+
+<script src="../js files(Functionality)/portfolio.js"></script>
+
+</body>
+
+</html>

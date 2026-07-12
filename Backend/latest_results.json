@@ -1,0 +1,14 @@
+{
+  "success": false,
+  "overall_score": 0,
+  "eye_contact": 0,
+  "confidence": 0,
+  "voice_clarity": 0,
+  "speaking_pace": 0,
+  "body_language": 0,
+  "organization": 0,
+  "transcript": {
+    "transcript": ""
+  },
+  "suggestion": "No analysis has been completed yet."
+}
