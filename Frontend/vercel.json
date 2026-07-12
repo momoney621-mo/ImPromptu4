@@ -1,5 +1,28 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/",
+      "destination": "/html%20files(structure)/index.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/html%20files(structure)/index.html"
+    },
+    {
+      "source": "/practice",
+      "destination": "/html%20files(structure)/practice.html"
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/html%20files(structure)/portfolio.html"
+    },
+    {
+      "source": "/community",
+      "destination": "/html%20files(structure)/community.html"
+    },
+    {
+      "source": "/progress",
+      "destination": "/html%20files(structure)/progress.html"
+    }
   ]
 }
