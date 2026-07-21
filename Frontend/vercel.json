@@ -21,14 +21,6 @@
     {
       "source": "/progress",
       "destination": "/html-files/progress.html"
-    },
-    {
-      "source": "/feedback",
-      "destination": "/html-files/feedback.html"
-    },
-    {
-      "source": "/login",
-      "destination": "/html-files/login.html"
     }
   ]
 }
