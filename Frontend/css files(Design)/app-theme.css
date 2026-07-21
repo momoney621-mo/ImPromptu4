@@ -1,0 +1,24 @@
+/* Shared PromptU application theme — loaded after each page's feature stylesheet. */
+:root { --cream:#fff8ec; --paper:#fffdf8; --pine:#16423c; --pine-soft:#2e6459; --coral:#e85836; --sun:#f5bb4b; --mist:#dceddf; --ink:#17352f; --muted:#63766f; }
+body { background:var(--cream) !important; color:var(--ink) !important; font-family:Manrope,Inter,Arial,sans-serif !important; }
+.container { min-height:100vh; background:var(--cream); }
+.sidebar { width:245px; padding:29px 18px; border-right:1px solid rgba(22,66,60,.14); background:#fffaf1; }
+.logo { color:var(--pine); }.logo i { background:var(--coral); color:#fffaf0; border-radius:50% 50% 50% 8px; transform:rotate(-45deg); }.logo i::before { display:inline-block; transform:rotate(45deg); }
+.sidebar nav { gap:7px; }.sidebar nav a { color:var(--muted); border-radius:9px; font-size:14px; }.sidebar nav a:hover,.sidebar nav a.active { color:#fffaf0; background:var(--pine); }
+.main { background:var(--cream) !important; padding:42px !important; }
+.main h1,.practice-header h1,.portfolio-header h1,.community-header h1,.progress-header h1 { color:var(--pine) !important; letter-spacing:-.04em; }
+.main p,.practice-header p,.portfolio-header p,.community-header p,.progress-header p { color:var(--muted) !important; }
+.badge { background:#fce7c4 !important; color:#a64a2f !important; border:0 !important; border-radius:999px !important; font-size:12px !important; }
+.primary-btn,.analyze-btn { border:0 !important; border-radius:8px !important; background:var(--coral) !important; color:#fffaf0 !important; box-shadow:0 9px 20px rgba(232,88,54,.16); }.primary-btn:hover,.analyze-btn:hover { background:#c9462c !important; transform:translateY(-2px); }
+.secondary-btn { border-color:rgba(22,66,60,.18) !important; color:var(--pine) !important; background:transparent !important; border-radius:8px !important; }.secondary-btn:hover { background:#fce7c4 !important; }
+.studio-card,.practice-card,.progress-card,.goals-card,.coach-center,.share-card,.feedback-card,.achievements-card,.stat-card,.speech-card,.reel-card,.analysis-content { background:var(--paper) !important; border:1px solid rgba(22,66,60,.13) !important; border-radius:14px !important; box-shadow:0 12px 28px rgba(22,66,60,.07) !important; }
+.studio-card h2,.practice-card h2,.progress-card h2,.goals-card h2,.coach-center h2,.share-card h2,.feedback-card h2,.achievements-card h2,.speech-card h2,.speech-card h3,.reel-card h2,.analysis-content h2,.analysis-content h3 { color:var(--pine) !important; }
+.card-header i,.stat-card i,.stat-icon i,.feedback-box i,.coach-card i,.speech-menu,.portfolio-toolbar i { color:var(--coral) !important; }
+input,textarea,select,.form-group select { border-color:rgba(22,66,60,.2) !important; border-radius:8px !important; background:#fffdf8 !important; color:var(--ink) !important; } input:focus,textarea:focus,select:focus,.form-group select:focus { border-color:var(--coral) !important; box-shadow:0 0 0 3px rgba(232,88,54,.12) !important; }
+.camera-wrapper,.video-container { background:var(--pine) !important; border-radius:12px !important; }.camera-placeholder { background:var(--mist) !important; color:var(--pine) !important; }.recording-status,.recording-pill { background:#fce7c4 !important; color:#a64a2f !important; }.record-dot { background:var(--coral) !important; }
+.feedback-box,.analysis-box,.goal-item,.coach-card,.achievement,.chart-placeholder { background:#fffaf1 !important; border-color:rgba(22,66,60,.14) !important; }.feedback-box:hover,.analysis-box:hover,.goal-item:hover,.coach-card:hover,.achievement:hover { background:#fce7c4 !important; }
+.overall-score h2,.analysis-score h1,.analysis-box span,.feedback-top span,.stat-information h2 { color:var(--coral) !important; }.skill-fill { background:linear-gradient(90deg,var(--coral),var(--sun)) !important; }.skill-bar { background:#e6eee6 !important; }
+.category { color:var(--pine) !important; background:#fffdf8 !important; border-color:rgba(22,66,60,.16) !important; }.category:hover,.category.active { color:#fffaf0 !important; background:var(--pine) !important; border-color:var(--pine) !important; }
+.portfolio-toolbar,.search-box { background:transparent !important; }.speech-thumbnail,.video-container { background:var(--pine) !important; }.visibility.public,.speech-type { background:#dceddf !important; color:var(--pine) !important; }.analysis-btn { background:var(--coral) !important; }.reel-overlay { background:linear-gradient(transparent,rgba(22,66,60,.91)) !important; }.action-btn:hover { background:var(--coral) !important; }
+.feedback-item { border-left-color:var(--coral) !important; background:#fffaf1 !important; }.connected { background:var(--mist) !important; color:var(--pine) !important; }.goal-item input { accent-color:var(--coral) !important; }
+@media (max-width:800px) { .sidebar { width:100%; }.main { padding:25px !important; } }

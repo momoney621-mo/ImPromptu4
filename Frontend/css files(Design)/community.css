@@ -638,7 +638,7 @@
 
 }
 
-.reel-card:hover iframe{
+.reel-card:hover .video-container iframe{
 
     transform:scale(1.02);
 
@@ -815,3 +815,22 @@
     }
 
 }
+
+/* Dynamically generated YouTube speech reels */
+.community-reels { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 50px; }
+.video-wrapper { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 18px 18px 0 0; background: #000; }
+.video-wrapper iframe { display: block; width: 100%; height: 100%; border: 0; }
+.reel-card .speaker-info { max-width: none; color: #111827; padding: 26px 30px 12px; }
+.reel-card .speaker-info h2 { font-size: 26px; margin: 0 0 6px; }
+.reel-card .speaker-info h3 { margin: 0 0 12px; color: #4f46e5; font-size: 17px; }
+.reel-card .speaker-info p { color: #6b7280; margin: 0; }
+.speech-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.speech-category, .speech-duration { display: inline-flex; align-items: center; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.speech-category { color: #4338ca; background: #eef2ff; }
+.speech-duration { color: #475569; background: #f1f5f9; }
+.reel-card .reel-actions { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 12px; padding: 12px 30px 28px; }
+.reel-card .action-btn, .reel-card .analysis-btn { width: auto; height: auto; min-height: 42px; border-radius: 12px; padding: 10px 14px; flex-direction: row; background: #f8fafc; border: 1px solid #e5e7eb; color: #374151; }
+.reel-card .action-btn:hover { color: white; border-color: #4f46e5; }
+.reel-card .like-btn.liked { background: #ef4444; border-color: #ef4444; color: white; }
+.reel-card .analysis-btn { background: #4f46e5; border-color: #4f46e5; color: white; font-size: 14px; }
+@media (max-width: 768px) { .reel-card .speaker-info { padding: 22px 20px 10px; } .reel-card .reel-actions { justify-content: flex-start; flex-wrap: wrap; padding: 12px 20px 22px; } }

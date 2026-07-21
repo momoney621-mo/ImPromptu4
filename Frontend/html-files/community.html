@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>SpeakUp AI | Community</title>
+    <title>ImPromptU | Community</title>
 
     <!-- Main CSS -->
     <link rel="stylesheet"
@@ -17,6 +17,8 @@
     <!-- Community CSS -->
     <link rel="stylesheet"
           href="../css files(Design)/community.css">
+
+    <link rel="stylesheet" href="../css files(Design)/app-theme.css">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -42,33 +44,33 @@ SIDEBAR
 
         <i class="fa-solid fa-microphone"></i>
 
-        <h2>SpeakUp AI</h2>
+        <h2>ImPromptU</h2>
 
     </div>
 
 <nav>
 
-    <a href="/">
+    <a href="index.html">
         <i class="fa-solid fa-house"></i>
         <span>Home</span>
     </a>
 
-    <a href="/practice">
+    <a href="practice.html">
         <i class="fa-solid fa-video"></i>
         <span>Practice</span>
     </a>
 
-    <a href="/portfolio">
+    <a href="portfolio.html">
         <i class="fa-solid fa-folder-open"></i>
         <span>Portfolio</span>
     </a>
 
-    <a href="/community">
+    <a class="active" href="community.html">
         <i class="fa-solid fa-users"></i>
         <span>Community</span>
     </a>
 
-    <a href="/progress">
+    <a href="progress.html">
         <i class="fa-solid fa-chart-line"></i>
         <span>Progress</span>
     </a>
@@ -113,57 +115,39 @@ CATEGORY BAR
 
 <div class="category-bar">
 
-<button class="category active">
+<button class="category active" data-category="all" type="button">
 
     All
 
 </button>
 
-<button class="category">
+<button class="category" data-category="motivational" type="button">
 
-    Original Oratory
-
-</button>
-
-<button class="category">
-
-    Informative
+    Motivational
 
 </button>
 
-<button class="category">
+<button class="category" data-category="inspirational" type="button">
 
-    Persuasive
-
-</button>
-
-<button class="category">
-
-    Impromptu
+    Inspirational
 
 </button>
 
-<button class="category">
+<button class="category" data-category="business" type="button">
 
-    Extemporaneous
-
-</button>
-
-<button class="category">
-
-    Congressional Debate
+    Business
 
 </button>
 
-<button class="category">
+<button class="category" data-category="leadership" type="button">
 
-    TED Talks
+    Leadership
 
 </button>
 
-<button class="category">
+<button class="category" data-category="success" type="button">
 
-    Toastmasters
+    Success
 
 </button>
 
@@ -175,228 +159,7 @@ REELS CONTAINER
 
 <section class="reels-feed">
 
-<!-- =====================================
-REEL 1
-===================================== -->
-
-<div class="reel-card">
-
-<div class="video-container">
-
-<iframe
-
-id="speechVideo"
-
-src=""
-
-title="Speech Video"
-
-allowfullscreen>
-
-</iframe>
-
-</div>
-
-<div class="reel-overlay">
-
-<div class="speaker-info">
-
-<h2>
-
-Original Oratory Champion
-
-</h2>
-
-<p>
-
-A championship-winning Original Oratory speech.
-
-</p>
-
-</div>
-
-<div class="reel-actions">
-
-<button class="action-btn">
-
-<i class="fa-solid fa-heart"></i>
-
-<span>3.1k</span>
-
-</button>
-
-<button class="action-btn">
-
-<i class="fa-solid fa-comment"></i>
-
-<span>241</span>
-
-</button>
-
-<button class="action-btn analysis-btn">
-
-<i class="fa-solid fa-chart-line"></i>
-
-Analysis
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-        <!-- =====================================
-             REEL 2 - INFORMATIVE
-        ====================================== -->
-
-        <div class="reel-card">
-
-            <div class="video-container">
-
-                <iframe
-                    src=""
-                    title="Informative Speech"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="reel-overlay">
-
-                <div class="speaker-info">
-
-                    <h2>Informative Speech Champion</h2>
-
-                    <p>Learn how top speakers educate and engage an audience.</p>
-
-                </div>
-
-                <div class="reel-actions">
-
-                    <button class="action-btn">
-                        <i class="fa-solid fa-heart"></i>
-                        <span>2.8k</span>
-                    </button>
-
-                    <button class="action-btn">
-                        <i class="fa-solid fa-comment"></i>
-                        <span>198</span>
-                    </button>
-
-                    <button class="action-btn analysis-btn">
-                        <i class="fa-solid fa-chart-line"></i>
-                        Analysis
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =====================================
-             REEL 3 - IMPROMPTU
-        ====================================== -->
-
-        <div class="reel-card">
-
-            <div class="video-container">
-
-                <iframe
-                    src=""
-                    title="Impromptu Speech"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="reel-overlay">
-
-                <div class="speaker-info">
-
-                    <h2>Impromptu Champion</h2>
-
-                    <p>Quick thinking and confident speaking under pressure.</p>
-
-                </div>
-
-                <div class="reel-actions">
-
-                    <button class="action-btn">
-                        <i class="fa-solid fa-heart"></i>
-                        <span>4.4k</span>
-                    </button>
-
-                    <button class="action-btn">
-                        <i class="fa-solid fa-comment"></i>
-                        <span>327</span>
-                    </button>
-
-                    <button class="action-btn analysis-btn">
-                        <i class="fa-solid fa-chart-line"></i>
-                        Analysis
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =====================================
-             REEL 4 - PERSUASIVE
-        ====================================== -->
-
-        <div class="reel-card">
-
-            <div class="video-container">
-
-                <iframe
-                    src=""
-                    title="Persuasive Speech"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="reel-overlay">
-
-                <div class="speaker-info">
-
-                    <h2>Persuasive Speaking</h2>
-
-                    <p>Discover speeches that inspire audiences to take action.</p>
-
-                </div>
-
-                <div class="reel-actions">
-
-                    <button class="action-btn">
-                        <i class="fa-solid fa-heart"></i>
-                        <span>5.7k</span>
-                    </button>
-
-                    <button class="action-btn">
-                        <i class="fa-solid fa-comment"></i>
-                        <span>412</span>
-                    </button>
-
-                    <button class="action-btn analysis-btn">
-                        <i class="fa-solid fa-chart-line"></i>
-                        Analysis
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
+    <div id="communityReels" class="community-reels"></div>
 
     </section>
 
