@@ -1,9 +1,14 @@
 {
+  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
     {
       "source": "/",
+      "destination": "/html-files/index.html"
+    },
+    {
+      "source": "/index",
       "destination": "/html-files/index.html"
     },
     {
