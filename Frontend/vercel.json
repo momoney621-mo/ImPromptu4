@@ -1,31 +1,26 @@
 {
-  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
     {
       "source": "/",
-      "destination": "/html-files/index.html"
-    },
-    {
-      "source": "/index",
-      "destination": "/html-files/index.html"
+      "destination": "/html-files/index"
     },
     {
       "source": "/practice",
-      "destination": "/html-files/practice.html"
+      "destination": "/html-files/practice"
     },
     {
       "source": "/portfolio",
-      "destination": "/html-files/portfolio.html"
+      "destination": "/html-files/portfolio"
     },
     {
       "source": "/community",
-      "destination": "/html-files/community.html"
+      "destination": "/html-files/community"
     },
     {
       "source": "/progress",
-      "destination": "/html-files/progress.html"
+      "destination": "/html-files/progress"
     }
   ]
 }
