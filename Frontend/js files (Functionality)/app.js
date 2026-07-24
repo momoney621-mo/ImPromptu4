@@ -1,5 +1,5 @@
 // Homepage interactions are intentionally light; the visual is CSS animated.
-document.querySelectorAll('a[href="practice.html"]').forEach((link) => {
+document.querySelectorAll('a[href="/practice"]').forEach((link) => {
     link.addEventListener('click', () => {
         document.body.classList.add('is-leaving');
     });

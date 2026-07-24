@@ -191,13 +191,12 @@ document.addEventListener("DOMContentLoaded", () => {
     /*
        IMPORTANT:
 
-       This path is resolved relative to index.html because it begins
-       with "../".
+        This root-relative path is served from the Vercel project root.
 
        Your structure should look similar to:
 
-       Frontend/
-       ├── html files/
+        Frontend/
+        ├── html-files/
        │   └── index.html
        └── public/
            └── models/
@@ -206,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
        If your "public" folder is somewhere else, update this URL.
     */
 
-    const modelUrl = "../public/models/microphone.glb";
+     const modelUrl = "/public/models/microphone.glb";
 
     loader.load(
         modelUrl,

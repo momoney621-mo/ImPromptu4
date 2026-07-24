@@ -3,4 +3,3 @@ __pycache__/
 *.pyc
 Backend/uploads/
 Backend/latest_results.json
-Add-Content .gitignore "Frontend/assets/videos/*.mp4"
